@@ -1,0 +1,9 @@
+# name: matrix.legacy
+# key: MatrixLegacy
+# expand-env: ((yas-indent-line 'fixed))
+# --
+\begin{${1:$$(yas-choose-value '("smallmatrix" "pmatrix"))}}
+${2:$$(let (row)
+           (dotimes (i (- (string-to-number yas-text) 1) row)
+           (setq row (concat row "&"))))}\\\\
+\end{$1}$0

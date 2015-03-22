@@ -1,0 +1,24 @@
+# -*- mode: snippet -*-
+# name: m by n matrix; \begin{matrix}...\end{matrix}
+# key: matrix
+# type: command
+# --
+(let ((m (read-number "m, number of row" 2))
+      (n (read-number "n, number of column" 2))
+      (cmpnt ""))
+  (dotimes (i m)
+    (dotimes (j n)
+      (setq cmpnt (format "%s ${%d:a_{%d%d}} %s"
+                                 cmpnt
+                                 (1+ (1+ (+ (* n i) j)))
+                                 (1+ i)
+                                 (1+ j)
+                                 (if (= j (1- n))
+                                     (if (/= i (1- m)) "\\\\\\" "")
+                                   "&"))))
+    (setq cmpnt (format "%s\n" cmpnt)))
+  (yas-expand-snippet (format "\\begin{${1:%s}}\n%s\\end{$1}$0"
+                              "$$(yas-choose-value
+                               '(\"smallmatrix\" \"Vmatrix\" \"vmatrix\" 
+                                 \"Bmatrix\" \"bmatrix\" \"pmatrix\"))"
+                              cmpnt)))

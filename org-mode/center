@@ -1,0 +1,5 @@
+#name : CENTER
+# --
+#+BEGIN_CENTER
+  $1
+#+END_CENTER

@@ -1,0 +1,8 @@
+# -*- mode: snippet; -*-
+# key: block
+# name: #+begin_...#+end_
+# expand-env: ((yas-indent-line (quote fixed)) (yas-wrap-around-region (quote nil)))
+# --
+#+BEGIN_$1 $2
+  $0
+#+END_$1

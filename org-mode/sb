@@ -1,0 +1,8 @@
+# key: sb
+# name: #+NAME:..#+BEGIN_SRC...#+END_SRC
+# expand-env: ((yas-indent-line (quote fixed)) (yas-wrap-around-region (quote nil)))
+# --
+#+NAME: ${1:name}
+#+BEGIN_SRC ${2:language}
+$0
+#+END_SRC

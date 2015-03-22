@@ -1,0 +1,4 @@
+#name : META ORG (NAME, KEYWORDS, PROPERTY)
+#key: meta
+# --
+#+${$$(yas-choose-value '("" "AUTHOR" "KEYWORDS" "PROPERTY" "NAME"))}: $0

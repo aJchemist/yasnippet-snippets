@@ -1,0 +1,4 @@
+# key: author
+# name: Author header
+# --
+#+AUTHOR: ${1:author}

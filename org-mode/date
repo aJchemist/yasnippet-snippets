@@ -1,0 +1,4 @@
+#key: date
+#name: Date header
+# --
+#+DATE: ${1:`(current-time-string)`}$0
